@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+  <%= render @trn_comment %>
+<div class=" container justify-content-center d-flex mt-5">
+
+    <%= link_to trn_new_path(@trn_new), class: "mt-auto btn btn-primary ms-5 " do %>
+      <p class="mt-1 ms-2">Back to new</p>
+    <%end %>
+
+  <!-- Mostrar botón para borrar comentario sólo si es Admin -->
+    <% if trn_user_signed_in? %>
+      <% if current_trn_user && current_trn_user.role?("trn_admin") %>
+        <%= button_to trn_new_trn_comment_path(@trn_new, @trn_comment), method: :delete, class: "mt-auto ms-5 btn btn-primary" do %>
+          <p class="mt-1 ms-2">Delete comment</p>
+        <% end%>
+      <%end %>
+    <% end %>
+   
+</div>

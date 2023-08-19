@@ -1,0 +1,19 @@
+ <div class="container mt-5">
+  <%= link_to trn_new_path(@trn_new), class: "mt-auto  btn btn-dark news-title" do %>
+        <div class="d-flex">
+            <p class="m-auto me-3">Back to article</p><i class="bi bi-chevron-left"></i></i>
+        </div>
+    <%end %>
+  <hr>  
+  </div>
+
+  
+<div class= "container mt-5">
+  <h4 class= "section-title text-center">New Comment</h4>
+  <%= render "form", trn_comment: @trn_comment %>
+  
+</div>
+
+
+
+   

@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="text-center">
+  <h1>Comments</h1>
+</div>
+
+<div id="trn_comments">
+  <% @trn_comments.each do |trn_comment| %>
+    <%= render trn_comment %>
+  <% end %>
+</div>
+

@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="mt-5 mb-5">
+  <%= render @trn_new %>
+</div>
+
+<div class=" container justify-content-center d-flex mt-3 mb-5">
+
+
+
+</div>
+
+<div id="trn_comments">
+  <div class=" text-center mb-5">
+    <h2 class="section-title">Comments</h2>
+  </div>
+
+  <% @trn_comments.each do |trn_comment| %>
+    <%= render trn_comment %>
+  <% end %>
+
+  <!--Verificar si el usuario está logeado para que aparezca el botón-->
+  <% if trn_user_signed_in? %>
+    <% if current_trn_user.role %>
+    <div class="text-center mt-5 mb-5 news-title">
+      <%= link_to new_trn_new_trn_comment_path(@trn_new), class: "mt-auto btn btn-dark" do %>
+        <div class="d-flex">
+          <p class="m-auto me-3">Leave a comment</p><i class="bi bi-chat"></i>
+        </div>
+      <%end %>
+    </div>
+    <% end %>
+  <% end%>
+  
+  
+</div>

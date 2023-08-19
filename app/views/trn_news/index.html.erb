@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="section-title text-center mt-5">News</h1>
+
+<div id="trn_news">
+  <% @trn_news.each do |trn_new| %>
+    <div class="mt-5 mb-5">
+      <%= render 'trn_index_new', trn_new: trn_new %>
+    </div>
+  <% end %>
+</div>
+

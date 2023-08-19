@@ -1,0 +1,25 @@
+<!-- Parcial para la vista index -->
+
+
+
+<div id="<%= dom_id trn_new %>">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center right-bck">
+            <div class="registration-right p-0">
+                <div class="event-list">
+                    <div class="card flex-row"><%= image_tag "#{trn_new.image}", class:"card-img-top" %>
+                        <div class="card-body">
+                             <h3 class="news-title"><%= trn_new.title %><h3>
+                             <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right" aria-hidden="true"></i><span><%= trn_new.created_at %></span><i class="fas fa-caret-right" aria-hidden="true"></i></h4>
+                        </div>
+                            
+                        <%= link_to trn_new, class: "mt-auto news-link" do %>
+                            <p class="mt-1 ms-2">Read More</p>
+                        <%end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

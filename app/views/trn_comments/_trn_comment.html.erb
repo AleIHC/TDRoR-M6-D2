@@ -1,0 +1,32 @@
+<%= link_to  trn_new_trn_comment_path(@trn_new, trn_comment) do %>
+    <div id="<%= dom_id trn_comment %>">
+
+    <div class="row d-flex justify-content-center comment">
+      <div class="col-md-8 col-lg-6 mb-5">
+        <div class="card shadow-0 border">
+          <div class="card-body p-0">
+            <div class="card m-0">
+              <div class="card-body">
+                <p><%= trn_comment.content %></p>
+
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-row align-items-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).webp" alt="avatar" width="25"
+                      height="25" />
+                    <p class="small mb-0 ms-2"><%= trn_comment.trn_user.name %></p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center">
+                    <p class="small text-muted mb-0 me-2">Upvote?</p>
+                    <i class="bi bi-hand-thumbs-up"></i>
+                    <p class="small text-muted mb-0">3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end%>
