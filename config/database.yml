@@ -85,6 +85,4 @@ test:
 #
 production:
   <<: *default
-  <<: *default
   password: <%= ENV["DATABASE_URL"] %>
-v
